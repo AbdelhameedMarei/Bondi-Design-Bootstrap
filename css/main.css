@@ -1,0 +1,317 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* Start Navbar */
+
+.navbar{
+    background-color: var(--dark-color);
+}
+
+.navbar-brand img{
+    width: 80px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--green-color);
+}
+
+.navbar .search{
+    border-left: 1px solid var(--green-color);
+}
+
+.navbar .search svg{
+    color: var(--green-color);
+    cursor: pointer;
+}
+
+.navbar .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+    font-size: 25px;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded = "true"] {
+    border-color: var(--green-color);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .navbar-nav .nav-link {
+        text-align: center;
+    }
+
+    .navbar .navbar-nav .nav-link:hover{
+        background-color: #EEE;
+        font-weight: bold;
+    }
+
+     .navbar .main-btn {
+        margin: auto;
+    }
+}
+/* End Navbar */
+
+/* Start Landing */
+
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+
+/* End Landing */
+
+/* Start Features */
+
+.main-title .fa-shapes {
+    color: var(--yellow-color);
+    font-size: 60px;
+}
+
+.main-title::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+}
+
+.features .icon-holder {
+    height: 200px;
+}
+
+.features .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+
+.features .icon-holder .icon {
+    color: var(--green-color);
+}
+
+.features h4 {
+    color: var(--yellow-color);
+}
+/* End Features */
+
+/* Start Our Work */
+
+.our-work{
+    background-color: var(--section-color);
+}
+
+.our-work ul .active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: 4px 13px;
+    border-radius: 20px;
+}
+
+.our-work ul li{
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover{
+    color: var(--red-color);
+}
+
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #666;
+}
+
+.our-work .box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #33d1cc7d;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: .4s;
+    transform: translateX(calc(-100% - 5px));
+}
+
+.our-work .box:hover::before {
+    transform: translateX(0);
+}
+
+/* End Our Work */
+
+
+/* Start Stuff */
+.stuff .description{
+    max-width: 450px;
+}
+/* End Stuff */
+
+/* Start Team */
+.team{
+    background-color: var(--section-color);
+}
+
+.team h2 {
+    color: var(--yellow-color);
+}
+
+.team .box h4{
+    background-color: var(--green-color);
+}
+/* End Team */
+
+/* Start Ptroject */
+.project{
+    background-color: var(--dark-color);
+}
+/* End Ptroject */
+
+/* Start subscribe */
+.subscribe{
+    background-color: var(--yellow-color);
+}
+
+.subscribe input[type = "text"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.subscribe input[type = "text"]:focus{
+    outline: none;
+}
+
+.subscribe ::placeholder {
+    color: #fff;
+}
+
+.subscribe input[type = "submit"]{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+/* end subscribe */
+
+/* Start Footer */
+.footer{
+    background-color: var(--dark-color);
+}
+
+.footer img{
+    width: 65px;
+}
+
+.footer .created, .copyed {
+    font-size: 14px;
+}
+
+.footer .created span {
+    color: var(--green-color);
+}
+
+.footer .copyed span {
+    color: var(--yellow-color);
+}
+
+.footer ul li{
+    font-size: 14px;
+}
+
+.footer ul li:hover {
+    cursor: pointer;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer .gmail {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.footer .social-links{
+    text-align: center;
+}
+
+.footer .social-links li {
+    margin-top: 20px;
+    margin-right: 18px;
+}
+
+.footer .social-links li a{
+    color: var(--section-color);
+    font-size: 20px;
+}
+
+.footer .social-links li a .facebook:hover{
+    color: #3b5998;
+    transition: .3s;
+}
+.footer .social-links li a .twitter:hover{
+    color: #55acee;
+    transition: .3s;
+}
+.footer .social-links li a .linkedin:hover{
+    color: #0a66c2;
+    transition: .3s;
+}
+.footer .social-links li a .youtube:hover{
+    color: #ff0000;
+    transition: .3s;
+}
+/* End Footer */
+
+/* Start UP Button */
+.up{
+    background-color: var(--yellow-color);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 8px;
+    line-height: 2.3;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    bottom: 160px;
+    display: none;
+}
+/* End UP Button */
