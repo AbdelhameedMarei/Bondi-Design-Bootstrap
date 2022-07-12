@@ -12,6 +12,28 @@ body {
     position: relative;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: var(--section-color);
+border-radius: 30px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: var(--green-color);
+border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #2e4c5b; 
+}
+
 /* Start Navbar */
 
 .navbar{
@@ -311,7 +333,7 @@ body {
     cursor: pointer;
     position: fixed;
     right: 15px;
-    bottom: 160px;
+    bottom: 40px;
     display: none;
 }
 /* End UP Button */
